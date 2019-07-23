@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>CALCULADORA DE RISCO</title>
+  </head>
+  <body>
+	<nav style="background-color: darkslategrey; position: fixed; top:0; z-index: 99999;">
+		<div class="nav-wrapper" style="margin-left: 24px;">
+			<a href="#" class="brand-logo">CALCULADORA DE RISCO</a>
+		</div>
+	</nav>
+    <div class="row">
+		<div class="content" style="padding-top: 70px;">
+      <div class="col s6 z-depth-3">
+        <div class="input-field col s12">
+			<select id="Cargo">
+			  	<option value="1">OPERADOR DE LOGISTICA</option>
+				<option value="2">ATENDENTE DE LOJA</option>
+				<option value="3">VENDEDOR DE PROJETOS</option>
+				<option value="4">GERENTE COMERCIAL</option>
+				<option value="5">AUXILIAR DE LOGISTICA</option>
+				<option value="6">OPERADOR DE EMPILHADEIRA</option>
+				<option value="7">ASSESSOR DE VENDAS</option>
+				<option value="8">ASSISTENTE DE LOGISTICA</option>
+				<option value="9">SUPERVISOR DE RELACIONAMENTO CLIENTES</option>
+				<option value="10">TECNICO DE MANUTENCAO</option>
+				<option value="11">SUPERVISOR DE LOGISTICA LOJA</option>
+				<option value="12">COORDENADOR COMERCIAL</option>
+				<option value="13">CONFERENTE</option>
+				<option value="14">ASSISTENTE CONTABILIDADE LOJA</option>
+			</select>
+			<label>Cargo</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="CCusto">
+			  	<option value="1">EXPEDICAO</option>
+				<option value="2">ATENDIMENTOCLIENTE</option>
+				<option value="3">CARPINTARIA MADEIRA</option>
+				<option value="4">PISOS LAMINA VINILIC</option>
+				<option value="5">GERBANGU</option>
+				<option value="6">ORGANIZACAO</option>
+				<option value="7">SERVICOS-CDs</option>
+				<option value="8">JARDIM</option>
+				<option value="9">CERAMICA</option>
+				<option value="10">PINTURA</option>
+				<option value="11">FERRAGENS</option>
+				<option value="12">ELETRICIDADE</option>
+				<option value="13">ILUMINACAO</option>
+				<option value="14">SERVICOS</option>
+				<option value="15">COZINHAS</option>
+				<option value="16">SANITARIO</option>
+				<option value="17">DECORACAO</option>
+				<option value="18">FERRAMENTAS</option>
+			</select>
+			<label>Centro de Custos</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="AreaRH">
+			  	<option value="1">Contagem</option>
+				<option value="2">Jacarepagua</option>
+				<option value="3">Rio Norte</option>
+				<option value="4">Servicos Internos</option>
+				<option value="5">Niteroi</option>
+				<option value="6">Rio Barra</option>
+				<option value="7">CD Belford Roxo</option>
+				<option value="8">BH Norte</option>
+				<option value="9">Bangu</option>
+				<option value="10">Belo Horizonte</option>
+			</select>
+			<label>Área RH</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="SofreuAcidenteUltimoAno">
+			  	<option value="0">Não</option>
+				<option value="1">Sim</option>
+			</select>
+			<label>Sofreu Acidente no Último Ano</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="IdadeCateg">
+			  	<option value="1">Ate 25</option>
+				<option value="2">Maior que 50</option>
+				<option value="3">Entre 36 e 40</option>
+				<option value="4">Entre 41 e 45</option>
+				<option value="5">Entre 26 e 30</option>
+				<option value="6">Entre 46 e 50</option>
+				<option value="7">Entre 31 e 35</option>
+			</select>
+			<label>Faixa Etária</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="Sexo">
+			  	<option value="2">Masculino</option>
+				<option value="1">Feminino</option>
+			</select>
+			<label>Sexo</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="Altura">
+			  	<option value="1">Até 1,70</option>
+				<option value="2">Mais de 1,70</option>
+			</select>
+			<label>Altura</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="Filhos">
+			  	<option value="0">Nenhum</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+			<label>Número de Filhos</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="PesoCateg">
+			  	<option value="1">Entre 81 e 90</option>
+				<option value="2">Ate 70</option>
+				<option value="3">Entre 71 e 80</option>
+			</select>
+			<label>Faixa de Peso</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="Escolaridade">
+			  	<option value="1">Ensino medio compl</option>
+				<option value="2">Superior incompleto</option>
+				<option value="3">Superior completo</option>
+				<option value="4">Fundamental compl</option>
+				<option value="5">Ensino medio incompl</option>
+			</select>
+			<label>Escolaridade</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="EstadoCivil">
+			  	<option value="1">Solteiro</option>
+				<option value="2">Casado</option>
+				<option value="3">Divorciado</option>
+				<option value="4">Outros</option>
+				<option value="5">Viúvo</option>
+			</select>
+			<label>Estado Civil</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="TotalHoraExtraMês">
+				<option value="2">Ate 2</option>
+				<option value="4">Entre 2 e 4</option>
+				<option value="3">Entre 4 e 6</option>
+				<option value="1">Entre 6 e 8</option>
+				<option value="5">Entre 8 e 10</option>
+			</select>
+			<label>Total de Hora Extra no Mês</label>
+		  </div>
+
+
+		  <div class="input-field col s12">
+			<select id="TotalHoraExtraMesAnt">
+				  <option value="6">Ate 2</option>
+				  <option value="2">Entre 2 e 4</option>
+				  <option value="4">Entre 4 e 6</option>
+				  <option value="5">Entre 6 e 8</option>
+				  <option value="3">Entre 8 e 10</option>
+				  <option value="1">Mais que 10</option>
+			</select>
+			<label>Total de Hora Extra no Mês Anterior</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="FaixaSalarial">
+				<option value="1">Entre 2.5 e 3mil</option>
+				<option value="2">Ate 2mil</option>
+				<option value="3">Maior que 3mil</option>
+				<option value="4">Entre 2 e 2.5mil</option>
+			</select>
+			<label>Faixa Salarial</label>
+		  </div>
+
+
+		  <div class="input-field col s12">
+			<select id="Absentieismo30">
+				  <option value="6">Ate 2</option>
+				  <option value="2">Entre 2 e 4</option>
+				  <option value="4">Entre 4 e 6</option>
+				  <option value="5">Entre 6 e 8</option>
+				  <option value="3">Entre 8 e 10</option>
+				  <option value="1">Mais que 10</option>
+			</select>
+			<label>Total de Absentieismo nos últimos 30 dias</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="Absentieismo90">
+				<option value="3">Ate 2</option>
+				<option value="2">Entre 2 e 4</option>
+				<option value="1">Entre 4 e 6</option>
+				<option value="5">Entre 6 e 8</option>
+				<option value="4">Entre 8 e 10</option>
+				<option value="6">Mais que 10</option>
+			</select>
+			<label>Total de Absentieismo nos últimos 90 dias</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="PontoMedio">
+			  	<option value="800">8:00</option>
+				<option value="810">8:10</option>
+				<option value="815">8:15</option>
+				<option value="820">8:20</option>
+				<option value="825">8:25</option>
+				<option value="830">8:30</option>
+				<option value="835">8:35</option>
+				<option value="900">9:00</option>
+			</select>
+			<label>Ponto Médio</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="FuncionariosSetor">
+				  <option value="4">Ate 2</option>
+				  <option value="2">Entre 2 e 4</option>
+				  <option value="6">Entre 4 e 6</option>
+				  <option value="3">Entre 6 e 8</option>
+				  <option value="1">Entre 8 e 10</option>
+				  <option value="5">Mais que 10</option>
+			</select>
+			<label>Total de Funcionários no Setor</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="Distancia">
+				  <option value="4">Ate 2</option>
+				  <option value="3">Ate 10</option>
+				  <option value="1">Entre 11 e 20</option>
+				  <option value="2">Entre 31 e 40</option>
+				  <option value="4">Entre 21 e 30</option>
+				  <option value="5">Maior que 50</option>
+			</select>
+			<label>Distância de Casa até o Trabalho (KM)</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="TempoDeEmprego">
+				  <option value="3">Ate 2 anos</option>
+				  <option value="1">Entre 2 e 4</option>
+				  <option value="5">Entre 4 e 6</option>
+				  <option value="2">Entre 6 e 8</option>
+				  <option value="4">Mais que 8</option>
+			</select>
+			<label>Tempo no Emprego (Anos)</label>
+		  </div>
+
+		  <div class="input-field col s12">
+			<select id="PeriodoExp">
+			  	<option value="0">Não</option>
+				<option value="1">Sim</option>
+			</select>
+			<label>Período de Experiência</label>
+		  </div>
+	  </div>
+
+      <div class="col s6">
+
+		<div class="col s12" style="position: fixed; top:60px; right: 35px; width: 45%">
+			<div class="card-panel teal">
+				<h4 class="white-text">Grupo de Risco <span id="grisco">3</span></h4>
+				<span class="white-text" id="gdesc">
+					Total de Registros no Modelo: 56<br/>
+					Abrangência do Modelo: 22<br/>
+					Qualidade do Modelo: 0.46<br/>
+				</span>
+			</div>
+		</div>
+
+		  <div style="position: fixed; bottom:32px; right:60px;">
+			<a onclick="sendData();" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">apps</i></a>
+		</div>
+	  </div>
+	</div>
+    </div>
+
+    <script>
+      M.AutoInit();
+      $(document).ready(function() {
+        $(document).ready(function() {
+          $("select").formSelect();
+        });
+      });
+
+
+
+
+var sendData = function(){
+
+
+var employee = {
+  "Cargo": $('#Cargo').val(),
+  "Ccusto": $('#Ccusto').val(),
+  "AreaRH": $('#AreaRH').val(),
+  "SofreuAcidenteUltimoAno": 0.0,
+  "Idade": $('#Idade').val(),
+  "Sexo": $('#Sexo').val(),
+  "Peso": $('#Peso').val(),
+  "Altura": $('#Autura').val(),
+  "Filhos": $('#Filhos').val(),
+  "Escolaridade": $('#Escolaridade').val(),
+  "EstadoCivil": $('#EstadoCivil').val(),
+  "TotalHoraExtraMês": $('#TotalHoraExtraMês').val(),
+  "TotalHoraExtraMesAnt": $('#TotalHoraExtraMesAnt').val(),
+  "FaixaSalarial": $('#FaixaSalarial').val(),
+  "FaltouUltimos7Dias": $('#FaltouUltimos7Dias').val(),
+  "FaltouUltimosSIM5Dias": $('#FaltouUltimosSIM5Dias').val(),
+  "Absentieismo30": $('#Absentieismo30').val(),
+  "Absenteismo90": $('#Absenteismo90').val(),
+  "PontoMedio": $('#PontoMedio').val(),
+  "FuncionariosSetor": $('#FuncionariosSetor').val(),
+  "Distancia": $('#Distancia').val(),
+  "TempoDeEmprego": $('#TempoDeEmprego').val(),
+  "PeriodoExp": $('#PeriodoExp').val()
+}
+
+
+
+	var settings = {
+  "url": "https://kmeans-api-nx.azurewebsites.net/api/riskcluster",
+  "method": "POST",
+  "headers": {
+    "Content-Type": "application/json",
+    "Accept": "*/*",
+    "cache-control": "no-cache"
+  },
+  "processData": false,
+  "data": JSON.stringify(employee)
+}
+
+	console.log(employee);
+	$.ajax(settings)
+	.done(function (response) {
+		$('#grisco').text(response.clusterId);
+		console.log('tag', response);
+	});
+}
+
+    </script>
+  </body>
+</html>
