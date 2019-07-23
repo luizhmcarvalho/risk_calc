@@ -23,8 +23,8 @@ pipeline {
         stage("Delivery Application on ICP") {
             steps {
                 container('kubectl') {
-                    sh "kubectl create deployment risk_calc-deployment --image=mycluster.icp:8500/default/risk_calc:v${env.BUILD_NUMBER} -n default"
-                    sh "kubectl expose deployment risk_calc-deployment --name=risk_calc-service --type=LoadBalancer --port=8888 -n default"
+                    sh "kubectl create deployment risk-calc-deployment --image=mycluster.icp:8500/default/risk_calc:v${env.BUILD_NUMBER} -n default"
+                    sh "kubectl expose deployment risk-calc-deployment --name=risk_calc-service --type=LoadBalancer --port=8888 -n default"
                 }
             }
         }
