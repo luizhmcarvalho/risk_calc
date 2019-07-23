@@ -1,0 +1,4 @@
+{
+	"appService.defaultWebAppToDeploy": "/subscriptions/7dae724e-bac0-4479-9b8b-f30962b38617/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/kmeans-app-nx",
+	"appService.deploySubpath": ""
+}
