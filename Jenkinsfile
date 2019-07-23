@@ -23,6 +23,7 @@ pipeline {
         stage("Delivery Application on ICP") {
             steps {
                 container('kubectl') {
+                    sh "kubectl delete deployment,services -l app=riskcalc-deployment"
                     sh "kubectl create deployment riskcalc-deployment --image=mycluster.icp:8500/default/riskcalc:v${env.BUILD_NUMBER} -n default"
                     sh "kubectl expose deployment riskcalc-deployment --name=riskcalc-service --type=LoadBalancer --port=80 -n default"
                 }
